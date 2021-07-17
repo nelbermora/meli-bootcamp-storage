@@ -1,7 +1,7 @@
 package main
 
-import "github.com/nelbermora/meli-bootcamp-storage/pkg/db"
+import "github.com/nelbermora/meli-bootcamp-storage/db"
 
 func main() {
-	db.EmployeesDB.Ping()
+	db.StorageDB.Ping()
 }

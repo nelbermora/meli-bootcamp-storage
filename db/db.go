@@ -8,18 +8,18 @@ import (
 )
 
 var (
-	EmployeesDB *sql.DB
+	StorageDB *sql.DB
 )
 
 func init() {
-	dataSource := "root@tcp(localhost:3306)/employees"
+	dataSource := "root@tcp(localhost:3306)/storage"
 	// Open inicia un pool de conexiones. Sólo abrir una vez
 	var err error
-	EmployeesDB, err = sql.Open("mysql", dataSource)
+	StorageDB, err = sql.Open("mysql", dataSource)
 	if err != nil {
 		panic(err)
 	}
-	if err = EmployeesDB.Ping(); err != nil {
+	if err = StorageDB.Ping(); err != nil {
 		panic(err)
 	}
 	log.Println("database Configured")
